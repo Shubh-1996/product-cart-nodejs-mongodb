@@ -76,7 +76,6 @@ app
     .route("/update-quantity")
     .post((req, res) => {
         const id = req.body._id;
-    console.log("reqwww", req.body._id);
         Cart.findById(id, (err,obj) => {
             if(err) {
                 res.send({"error": "Record not found"})
